@@ -1,16 +1,15 @@
 import React from "react"
+import { PostNode } from "../services/request"
 
 interface PostCardProps {
-  post: {
-    title: string
-    excerpt: string
-  }
+  post: Pick<PostNode, "node">
 }
+
 const PostCard = ({ post }: PostCardProps) => {
   return (
     <div>
-      {post.title}
-      {post.excerpt}
+      {post.node.title}
+      {post.node.excerpt}
     </div>
   )
 }
