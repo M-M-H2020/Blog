@@ -12,7 +12,7 @@ interface HomePageProps {
 
 const Home: NextPage<HomePageProps> = ({ posts }) => {
   return (
-    <div className='container mx-auto px-10 mb-8 '>
+    <div className='container mx-auto px-10 mb-8'>
       <Head>
         <title>CMS Blog</title>
         <link rel='icon' href='/favicon.ico' />
@@ -21,7 +21,7 @@ const Home: NextPage<HomePageProps> = ({ posts }) => {
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 '>
         <div className='lg:col-span-8 col-span-1'>
           {posts.map((post, i) => (
-            <PostCard key={post.node.title} post={post} />
+            <PostCard key={post.node.title} post={post.node} />
           ))}
         </div>
         <div className='lg:col-span-4 col-span-1'>
